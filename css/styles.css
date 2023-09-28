@@ -102,19 +102,34 @@ align-items: center;
 gap: 40px;
 }
 .menu-link {
-    color: #2E2F42;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    padding-top: 24px;
-    padding-bottom: 24px;
+display: block;
+
+color: #2E2F42;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.02em;
+padding-top: 24px;
+padding-bottom: 24px;
 }
 .menu-link:hover,
 .menu-link:focus
  {
   color: #404BBF;
 }
+.menu-link-active {
+  color: #2E2F42;
+  position: relative;
+}
+.menu-link-active:active::after {
+content: ""; 
+position: absolute;
+width: 48px;
+left: 0;
+bottom: -49px;
+border: 2px solid #404BBF;
+border-radius: 2px;
 
+} 
 
 .contacts {
   font-style: normal;
