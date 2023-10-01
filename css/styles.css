@@ -49,8 +49,6 @@ p {
 }
 
 .top {
-  padding-top: 24px;
-  padding-bottom: 24px;
   border-bottom: 1px solid#E7E9FC;
   max-width: 1440px;
   margin: 0 auto;
@@ -306,7 +304,7 @@ background-color: #404BBF;
   height: 100%;
   width: 100%;
   object-fit: cover;
-  margin-bottom: 32px;
+ 
 }
 
 .team-card {
@@ -318,30 +316,33 @@ background-color: #404BBF;
   gap: 24px;
   justify-content: center;
  
-
+.card-icon-bg {
+  width: 40px;
+  height: 40px;
+}
 }
 
 .card-icon {
-
 }
 
 .team-item:hover .team-card-icon,
-.team-item:focus .team-card-icon {
+.team-item:focus .team-card-icon,
+.team-item:active .team-card-icon
+ {
   background-color: #404BBF;
   fill: #404BBF;
 }
 
 .team-card-icon {
-max-width: 100%;
-max-height: 100%;
+width: 100%;
+height: 100%;
 background-color: #4d5ae5;
 fill: #4d5ae5;
 border-radius: 50%;
-padding: 12px;
 display: flex;
 align-items: center;
 justify-content: center;
-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -443,8 +444,6 @@ transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezi
   letter-spacing: 0.02em;
 } 
 .footer {
-  max-width: 1440px;
-  margin: 0 auto;
   background: #2E2F42;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -452,17 +451,14 @@ transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezi
 
 }
 
-.footer-box {
-  display: flex;
-  align-items: baseline;
-
-}
-
 .footer-container {
-  margin-right: 120px;
-  margin-left: 156px;
+  display: flex;
+  стиль align-items: baseline;
 }
-
+.footer-logo-descr 
+{
+  margin-right: 120px;
+}
 .footer-studio {
   color: #F4F4FD;
   font-family: "Raleway", sans-serif;
@@ -476,14 +472,12 @@ transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezi
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
-  margin-right: 269px;
 }
 
 .footer-descr {
   color: #F4F4FD;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-right: 120px;
 }
 
 .social-text {
@@ -512,10 +506,11 @@ color: #FFF;
   display: flex;
   align-items: center;
   justify-content: center ;
-width: 40px;
-  height: 40px;
+
 }
 .footer-icon-bg {
+width: 40px;
+height: 40px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-icon:hover,
@@ -525,5 +520,4 @@ fill: #31d0aa;
 }
 
 .footer-icon {
-
 }
